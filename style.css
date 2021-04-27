@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #E5E5E5;
+    font-family: "Open Sans";
+    display: grid;
+    grid-template-areas: "header header header header"
+    ". post1 . sidebar"
+    ". post2 . sidebar"
+    ". post3 . ."
+    "footer footer footer footer";
+    width: 1440px;
+    height: 2428px;
+}
+body span {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #545454;
+
+}
+main {
+    padding: 56px 140px 64px 140px;
+}
+.post1, .post2, .post3 {
+    background-color: #FFFFFF;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.12);
+    margin-bottom: 50px;
+}
+header {
+    background: #FFFFFF;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.12);
+    grid-area: header;
+    display: flex;
+    padding: 14px 169px 13px 140px;
+    align-items: center;
+}
+.sidebar {
+    grid-area: sidebar;
+    margin: 56px 140px 906px 0;
+    background-color: #FFFFFF;
+}
+.post1 {
+    grid-area: post1
+}
+.post2 {
+    grid-area: post2
+}
+.post3 {
+    grid-area: post3
+}
+footer {
+    grid-area: footer;
+    background-color: #222222;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: left;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 25px 550px 26px 509px;
+}
+button {
+    all: unset;
+    background-color: #FFFFFF;
+    border: 1px solid #FE0078;
+    box-sizing: border-box;
+    border-radius: 20px;
+    padding: 12px 24px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    color: #545454;
+    cursor: url("assets/Cursor.png"), pointer;
+}
+button:hover {
+    background: #FE0078;
+    color: #FFFFFF
+}
+input {
+    cursor: url("assets/Cursor.png"), pointer;
+    width: 340px;
+    height: 52px;
+    left: 940px;
+    top: 146px;
+    border: 1px solid #EEEEEE;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+input:hover {
+    border: 1px solid #FE0078;
+}
+input::placeholder {
+    color: #545454;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+}
+.menuclass {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    color: #000000;
+    border-left: 3px solid #FE0078;
+}
+h1 {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    padding: 24px 0 8px 24px;
+}
+.autordata{
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    padding: 0 0 14px 24px;
+    color: #929292;
+}
+.publicidade {
+    display: grid;
+    grid-row-gap: 50px;
+    grid-row: 1fr 1fr 1fr 1fr;
+    grid-column: 1fr;
+}
+.filho {
+    display: flex;
+    width: 340px;
+    height: 240px;
+    background-color: #EEEEEE;
+    align-items: center;
+    justify-content: center;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    color: #545454;
+}
