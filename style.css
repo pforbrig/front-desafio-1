@@ -7,13 +7,14 @@ body {
     background-color: #E5E5E5;
     font-family: "Open Sans";
     display: grid;
-    grid-template-areas: "header header header header"
-    ". post1 . sidebar"
-    ". post2 . sidebar"
-    ". post3 . ."
-    "footer footer footer footer";
-    width: 1440px;
-    height: 2428px;
+    grid-template-areas: " header header header header"
+    " . main sidebar ."
+    " . main sidebar ."
+    " . main . ."
+    " footer footer footer footer";
+    grid-row-gap: 40px;
+    grid-template-columns: 140px 780px 380px 140px;
+    grid-template-rows: 70px 696px 696px 696px 70px;
 }
 body span {
     font-size: 14px;
@@ -22,28 +23,38 @@ body span {
     letter-spacing: 0em;
     text-align: left;
     color: #545454;
-
 }
 main {
-    padding: 56px 140px 64px 140px;
+    grid-area: main;
+    padding-right: 50px;
 }
 .post1, .post2, .post3 {
     background-color: #FFFFFF;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.12);
-    margin-bottom: 50px;
 }
 header {
     background: #FFFFFF;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.12);
     grid-area: header;
     display: flex;
-    padding: 14px 169px 13px 140px;
     align-items: center;
+    justify-content: space-between;
+}
+.svg {
+    padding-left: 140px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+.links {
+    padding-right: 121px
+}
+.link {
+    padding-right: 48px;
 }
 .sidebar {
     grid-area: sidebar;
-    margin: 56px 140px 906px 0;
     background-color: #FFFFFF;
+    margin-bottom: 36px;
 }
 .post1 {
     grid-area: post1
@@ -63,7 +74,9 @@ footer {
     text-align: left;
     color: #FFFFFF;
     text-align: center;
-    padding: 25px 550px 26px 509px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 button {
     all: unset;
@@ -91,6 +104,7 @@ input {
     border: 1px solid #EEEEEE;
     box-sizing: border-box;
     border-radius: 10px;
+    padding: 10px;
 }
 input:hover {
     border: 1px solid #FE0078;
@@ -121,11 +135,17 @@ h1 {
     padding: 0 0 14px 24px;
     color: #929292;
 }
+.topo {
+    display: grid;
+    place-content: center;
+}
 .publicidade {
     display: grid;
-    grid-row-gap: 50px;
+    grid-row-gap: 32px;
     grid-row: 1fr 1fr 1fr 1fr;
     grid-column: 1fr;
+    padding-top: 47px;
+    place-content: center;
 }
 .filho {
     display: flex;
@@ -138,4 +158,22 @@ h1 {
     font-weight: normal;
     font-size: 36px;
     color: #545454;
+}
+.menu {
+    color: #545454;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: left;
+    cursor: url("assets/Cursor.png"), pointer;
+    border-bottom: 2px dashed #EEEEEE;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 340px;
+    height: 35px;
+}
+.menu:hover {
+    border-bottom: 2px dashed #FE0078;
+    color: #FE0078;
 }
