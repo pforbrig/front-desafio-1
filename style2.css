@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #E5E5E5;
+    font-family: "Open Sans";
+    display: grid;
+    grid-template-areas: " header header header header"
+    " . main sidebar ."
+    " . main sidebar ."
+    " . main . ."
+    " footer footer footer footer";
+    grid-template-columns: 140px 780px 380px 140px;
+    grid-template-rows: 110px 736px 736px 736px 110px;
+}
+body span {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #545454;
+}
+main {
+    grid-area: main;
+    padding-right: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px
+}
+.post1 {
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+    height: 1152px
+}
+header {
+    background: #FFFFFF;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.12);
+    grid-area: header;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+.svg {
+    padding-left: 140px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+.links {
+    padding-right: 121px
+}
+.link {
+    padding-right: 48px;
+}
+.sidebar {
+    grid-area: sidebar;
+    background-color: #FFFFFF;
+    margin-bottom: 76px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+}
+.pesquisar {
+    padding: 20px 20px 32px 0
+}
+footer {
+    grid-area: footer;
+    background-color: #222222;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: left;
+    color: #FFFFFF;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+}
+button {
+    all: unset;
+    background-color: #FE0078;
+    color: #EEEEEE;
+    border: 1px solid #FE0078;
+    box-sizing: border-box;
+    border-radius: 20px;
+    padding: 12px 24px;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: url("assets/Cursor.png"), pointer;
+}
+input {
+    cursor: url("assets/Cursor.png"), pointer;
+    width: 340px;
+    height: 52px;
+    left: 940px;
+    top: 146px;
+    border: 1px solid #EEEEEE;
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 10px;
+}
+input:hover {
+    border: 1px solid #FE0078;
+}
+input::placeholder {
+    color: #545454;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+}
+.menuclass {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    color: #000000;
+    border-left: 2px solid #FE0078;
+    padding: 0 0 0 14px;
+    margin-bottom: 40px;
+}
+h1 {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    padding: 24px 0 8px 24px;
+}
+.autordata{
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    padding: 0 0 14px 24px;
+    color: #929292;
+}
+.texto {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #545454;
+    padding: 24px
+
+}
+.botao {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.topo {
+    display: grid;
+    place-content: center;
+    padding-left: 33px;
+}
+.publicidade {
+    display: grid;
+    grid-row-gap: 32px;
+    grid-row: 1fr 1fr 1fr 1fr;
+    grid-column: 1fr;
+    padding-top: 47px;
+    place-content: center;
+}
+.filho {
+    display: flex;
+    width: 340px;
+    height: 240px;
+    background-color: #EEEEEE;
+    align-items: center;
+    justify-content: center;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    color: #545454;
+}
+.menu {
+    color: #545454;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: left;
+    cursor: url("assets/Cursor.png"), pointer;
+    border-bottom: 2px dashed #EEEEEE;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 340px;
+    height: 35px;
+    padding: 16px 0 16px 0;
+}
+.menu:hover {
+    border-bottom: 2px dashed #FE0078;
+    color: #FE0078;
+}
+.lista {
+    padding-left: 48px;
+    font-weight: 400;
+    font-size: 14px;
+    color: #000000;
+}
+.lista2 {
+    padding-left: 41px;
+}
+.formulario {
+    display: grid;
+    grid-template-areas: "nome email"
+    "comentario comentario";
+    grid-row-gap: 24px;
+    grid-column-gap: 24px;
+}
+.inputcomentario {
+    grid-area: comentario;
+}
+.nome {
+    grid-area: nome;
+}
+.email {
+    grid-area: email
+}
+textarea {
+    height: 176px;
+    width: 732px;
+    margin-bottom: 48px;
+    border: 1px solid #EEEEEE;
+    cursor: url("assets/Cursor.png"), pointer;
+}
+textarea:hover {
+    border: 1px solid #FE0078;
+}
+.coment {
+    padding-left: 0;
+    padding-bottom: 24px;
+}
+main input {
+    width: 354px;
+    height: 42px;
+    padding-left: 0;
+    background: #FFFFFF;
+    border: 1px solid #EEEEEE;
+    box-sizing: border-box;
+    border-radius: 2px;
+}
